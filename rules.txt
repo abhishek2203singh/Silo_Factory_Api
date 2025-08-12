@@ -1,0 +1,36 @@
+******************************************************************** API RULES 
+1.// TODO: For each master table API, start with the `ms-` prefix.
+// Example: If you want to create a new silo in the master table, the route will be: `ms-silo:create`
+
+Master Silo Routes (ms-silo):
+- ms-silo:create => Create a new silo in the master table
+- ms-silo:update => Update the silo in the master table
+- ms-silo:delete => Delete the silo in the master table
+- ms-silo:by-id => Get a silo by ID from the master table
+- ms-silo:all => Get all silos from the master table
+
+2. TODO: Naming Convention for Routes:
+Each route should start with a fixed namespace. For example, any route associated with users must start with `user:` followed by the route name.
+
+Examples:
+- silo:add => Add a new entry in the silo table
+- silo:update => Update an existing entry in the silo table
+- silo:delete => Delete an existing entry in the silo table
+- silo:by-id => Get a specific silo entry by ID
+
+3. TODO: 
+ms-alert-type:create
+ms-alert-type:update
+ms-alert-type:delete
+ms-alert-type:by-id
+ms-alert-type:all
+
+************************************************************************* DB RULES ********************************************
+
+1.// TODO: Ensure that all table fields follow snake_case naming convention. 
+// Example: customer_details instead of customerDetails.
+
+
+2.// TODO: For each transactional table, create a corresponding update table 
+// with the format: <transaction_table_name>_Update. 
+// Example: For a table named 'orders', the update table should be 'orders_Update'.
