@@ -22,7 +22,7 @@
 // // const storage = s3Storage({
 // //     s3: s3,
 // //     acl: 'public-read',
-// //     bucket: 'ritzvrbucket/test',
+// //     bucket: '/test',
 // //     ContentType: '*',
 // //     ContentDisposition: 'attachment',
 // //     key: Date.now().toString() + file.originalname
@@ -38,7 +38,7 @@
 // //         })
 // //     },
 // //     s3: s3,
-// //     bucket: 'ritzvrbucket/test',
+// //     bucket: '/test',
 // //     multiple: true,
 // //     acl: 'public-read',
 // //     ContentType: '*',
@@ -102,7 +102,7 @@
 //     //     storage: s3Storage({
 //     //         s3: s3,
 //     //         acl: 'public-read',
-//     //         bucket: 'ritzvrbucket/Images',
+//     //         bucket: '/Images',
 //     //         ContentType: '*',
 //     //         ContentDisposition: 'attachment',
 //     //         metadata: (req, file, cb) => {
@@ -130,7 +130,7 @@
 //     //     Key: `${config.uploads.aws.Bucket}/test/${Date.now()}-myImage`,
 //     //     ACL: config.uploads.aws.ACL,
 //     //     s3: s3,
-//     //     bucket: 'ritzvrbucket/test',
+//     //     bucket: '/test',
 
 //     //     acl: 'public-read',
 //     //     multiple: true,

@@ -983,7 +983,7 @@ class CodeSet {
                 console.log('\x1b[32m%s\x1b[0m', "\n \n Bucketpath Name   : " + bucketPath + "\n");
                 let params = {
                     ACL: 'public-read',
-                    Bucket: 'ritzvrbucket/mpd',
+                    Bucket: '/mpd',
                     ContentType: '*',
                     ContentDisposition: 'attachment',
                     Key: bucketPath,
