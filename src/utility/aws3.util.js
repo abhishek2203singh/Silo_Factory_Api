@@ -14,7 +14,7 @@ const awsuploader = {
             s3 = new AWS.S3({
                 params: {
                     ACL: 'public-read',
-                    Bucket: 'ezeebuckt/Pious',
+                    Bucket: 'your-bucket-name', // replace with your bucket name
                     ContentEncoding: 'base64',
                     Contenttype: '*',
                     Contentdisposition: 'attachment',

@@ -19,7 +19,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new socketIo(server, {
     cors: {
-        origin: ["http://localhost:2121", "http://pious.kratitech.com", "exp://192.168.0.79:8081", "http://localhost:8081"],
+        origin: ["http://localhost:2121",],
         methods: ["GET", "POST"]
     }
 });
