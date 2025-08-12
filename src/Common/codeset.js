@@ -12,9 +12,9 @@ var post_p, post_s;
 
 // const AWS = require('aws-sdk');
 // AWS.config.update({
-//     "accessKeyId": 'AKIA4KE3QFVYQVFIGAJ7',
-//     "secretAccessKey": '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',
-//     "region": 'ap-south-1',
+//     "accessKeyId": '',
+//     "secretAccessKey": '',
+//     "region": '',
 // });
 
 
@@ -1682,14 +1682,14 @@ class CodeSet {
     }
     videoComments(Id) {
         return new Promise(async (resolve, reject) => {
-            const querydn = connt.query("SELECT PtCt.Id as CommentId,  PtCt.CommentText, u.Fname, u.Lname, u.ImagesUrl, u.BlueMark "+
-            "FROM SelfComments as sct left join Post_comments as PtCt on sct.CommentId = PtCt.Id left join users as u on sct.CreatedBy = u.Id "+ 
-            "where sct.PostPartId = ? and sct.ViewType = 1 and PtCt.ViewBy = 1",  [Id], (err, result) => {
-            //  console.log('\x1b[32m%s\x1b[0m',"\n*********************************************************");
-            console.log('\x1b[32m%s\x1b[0m', "\n" + querydn.sql);
-            return resolve(result);
-        })
-    });
-}
+            const querydn = connt.query("SELECT PtCt.Id as CommentId,  PtCt.CommentText, u.Fname, u.Lname, u.ImagesUrl, u.BlueMark " +
+                "FROM SelfComments as sct left join Post_comments as PtCt on sct.CommentId = PtCt.Id left join users as u on sct.CreatedBy = u.Id " +
+                "where sct.PostPartId = ? and sct.ViewType = 1 and PtCt.ViewBy = 1", [Id], (err, result) => {
+                    //  console.log('\x1b[32m%s\x1b[0m',"\n*********************************************************");
+                    console.log('\x1b[32m%s\x1b[0m', "\n" + querydn.sql);
+                    return resolve(result);
+                })
+        });
+    }
 }
 module.exports = new CodeSet();
